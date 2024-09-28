@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-LINE_LENGTH = 40
+LINE_LENGTH = 80
 first_line = ""
 for i in range(LINE_LENGTH):
     if i != LINE_LENGTH-1:
@@ -13,8 +13,8 @@ patterns = {
     "...": ".",
     "..*": "*",
     ".*.": "*",
-    ".**": ".",
-    "*..": "*",
+    ".**": "*",
+    "*..": ".",
     "*.*": "*",
     "**.": "*",
     "***": ".",
@@ -37,4 +37,4 @@ def rule110_recursive(prev_line, max_depth=10, depth=0):
     print(new_line)
     rule110_recursive(new_line, max_depth, depth + 1)
 
-rule110_recursive(first_line, 40)
+rule110_recursive(first_line, 80)
